@@ -1,0 +1,474 @@
+
+@font-face {
+                    font-family: 'OpenSans-Regular';
+                    src: url('../fonts/Open_Sans/OpenSans-Regular.ttf');
+                    font-weight: normal;
+                    font-style: normal;
+}
+@font-face {
+                    font-family: 'OpenSans-Bold';
+                    src: url('../fonts/Open_Sans/OpenSans-Bold.ttf');
+                    font-weight: bold;
+                    font-style: normal;
+}
+@font-face {
+                    font-family: 'OpenSans-Light';
+                    src: url('../fonts/Open_Sans/OpenSans-Light.ttf');
+                    font-weight: normal;
+                    font-style: normal;
+}@font-face {
+                    font-family: 'OpenSans-SemiBold';
+                    src: url('../fonts/Open_Sans/OpenSans-SemiBold.ttf');
+                    font-weight: normal;
+                    font-style: normal;
+}
+/* GLOBAL STYLES ______________________
+-------------------------------------*/
+
+*{
+    box-sizing:border-box
+}
+
+html{
+    font-size: 62.5%
+}
+body{
+    font: 1.4rem 'OpenSans-Regular';
+	color: #ffffff;
+}
+img{
+        width: 100%;
+        max-width: 100%;
+        display: block;
+    }
+a{
+    text-decoration: none;
+}
+.grid_container{
+    padding: 25px 5vw;
+    display: flex;
+    flex-flow: column;
+}
+
+/* Mobyle ______________________
+ -------------------------------------*/
+header{
+	background: url(../images/header.jpg) center no-repeat;
+	background-size: cover;
+}
+header .logo{
+	display: block;
+}
+header .logo span{
+	display: block;
+	background: url(../images/sprites.png) -656px -10px no-repeat;
+	width: 92px; height: 41px;
+	margin: 0 0 160px 0;
+   }
+header h1{
+	font: normal 2.5rem 'OpenSans-Light';
+	color: #ffffff;
+	margin: 0 0 20px 0;
+}
+header .grid_container p {
+	margin: 0 0 155px 0;
+}
+/*main_______________________________
+______________________________________*/
+main .start{
+	display: flex;
+	justify-content: space-between;
+	flex-flow: row wrap;
+	color: #959595;
+	padding: 0 0 40px 0;
+}
+main  .start h2{
+	font: normal 2.5rem 'OpenSans-Light';
+	margin: 0 0 30px 0;
+}
+main .start .left p,
+main .start .right p{
+	margin: 0 0 35px 0;
+}
+main .article,
+main .article .items{
+	display: flex;
+	justify-content: center;
+	flex-flow: row wrap;
+}
+main .article .items article{
+	padding: 50px 55px 60px 40px;
+	background: #555555;
+}
+main .article .items article h3{
+	font: normal 2rem 'OpenSans-Light';
+	color: #ffffff;
+	margin: 0 0 25px 0;
+}
+main .article .items article p{
+	margin: 0 0 40px 0;
+}
+main .article .items article a,
+main .background article a{
+	/*display: block;*/
+	position: relative;
+	color: #ffffff;
+}
+main .article .items article a::after,
+main .background article a::after{
+	content: '';
+	position: absolute;
+	width: 14px; height: 5px;
+    background: url('../images/sprites.png') -734px -115px no-repeat;
+	top: 9px;
+    left: 115px;
+}
+main .article .items .pink{
+	background: #f5989d;
+}
+main .article .items .blue{
+	background: #615f7d;
+}
+main .article .items .img{
+	background: url(../images/block.png) center no-repeat;
+	background-size: cover;
+}
+main .article .items .size{
+	background: url(../images/block2.png) center no-repeat;
+	background-size: cover;
+}
+main .article .items .grin{
+	background: #82ca9c;
+}
+main .info{
+	padding: 50px 0 0 0;
+	color: #959595;
+}
+main .info h2{
+	font: normal 3rem 'OpenSans-Light';
+	color: #222626;
+	margin: 0 0 35px 0;
+}
+main .info .section_items {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+main .info .section_items article{
+	margin: 0 25px 35px 0;
+}
+main .info .section_items article h5{
+	font: normal 1.5rem 'OpenSans-SemiBold';
+	margin: 0 0 20px 0;
+}
+main .info .section_items article p,
+main .background article p{
+	line-height: 2rem;
+	}
+main .background{
+	background: url(../images/block4.png) center no-repeat;
+	background-size: cover;
+	padding: 0 5vw;
+    margin: 0 -5vw;
+	position: relative;
+}
+main .background::before{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.55);
+	z-index: -1;
+}
+main .background article{
+	padding: 440px 0 135px;
+	position: relative;
+	z-index: 1;
+}
+main .background article h2{
+	font: normal 2.5rem 'OpenSans-Light';
+	margin: 0 0 30px 0;
+}
+main .background article p{
+	margin: 0 0 25px 0;
+}
+main .info_grin{
+	background: #82ca9c;
+	color: #ffffff;
+	padding: 125px 5vw 160px;
+    margin: 0 -5vw;
+}
+main .card_info{
+	background: #f6f7fa;
+	color: #94a6b3;
+	padding: 45px 0 0 0;
+	display: flex;
+	flex-flow:  row wrap;
+	justify-content: space-between;
+}
+main .card_info article{
+	padding: 30px 25px;
+}
+main .card_info article span{
+	padding: 8px 12px;
+	background: #e1e1e1;
+	color: #ffffff;
+	border-radius: 5px;
+	margin: 0 0 25px 0;
+	display: inline-block;
+}
+main .card_info article h3{
+	font: normal 2.5rem 'OpenSans-Light';
+	margin: 0 0 30px 0;
+	color: #000000;
+}
+main .card_info article p{
+	margin: 0 0 30px 0;
+}
+main .card_info article .buton{
+	padding: 20px 30px;
+	background: #82ca9c;
+	color: #ffffff;
+	border-radius: 3px;
+	margin: 0 0 20px 0;
+	font: normal 1.5rem 'OpenSans-Bold';
+	display: block;
+	max-width: 155px;
+}
+main .card_info article .spisok li{
+	display: inline-block;
+}
+main .card_info article .spisok li a{
+	display: block;
+	margin: 0 15px 0 0;
+}
+main .card_info article .spisok li .apple{
+	width: 20px; height: 25px;
+    background: url('../images/sprites.png') -656px -115px no-repeat;
+}
+main .card_info article .spisok li .windows{
+	width: 24px; height: 24px;
+    background: url('../images/sprites.png') -656px -71px no-repeat;
+}
+
+/*Footer _________________________
+__________________________________*/
+
+footer{
+	background: #192431;
+	padding: 0 0 100px 0;
+}
+footer .items_footer{
+	display: flex;
+	flex-flow: row wrap;
+}
+footer .items_footer h6,
+footer .spisoc h6{
+	font: bold 1.3rem 'OpenSans-SemiBold';
+	margin: 0 0 25px 0;
+}
+footer .items_footer p,
+footer .spisoc p{
+	line-height: 1.5;
+}
+footer .items_footer .items_left,
+footer .items_footer .items_right{
+	margin: 0 0 30px 0;
+}
+footer .items_footer .items_right form{
+	display:  flex;
+	flex-flow: row;
+	margin: 0 0 20px 0;
+}
+footer .items_footer .items_right form input[type="text"]{
+	min-height: 40px;
+	border-radius: 5px 0 0 5px;
+	width: 75%;
+}
+footer .items_footer .items_right form input[type="submit"]{
+	min-height: 40px;
+	width: 40px;
+	border-radius: 0 5px 5px 0;
+	background: #82ca9c;
+	border: none;
+	position: relative;
+}
+footer .items_footer .items_right form input[type="submit"]::before{
+	content: '';
+	position: absolute;
+	width: 24px; height: 18px;
+    background: url(../images/sprites.png) -700px -71px no-repeat;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+footer .spisoc{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+footer .spisoc .items_spisoc{
+	margin: 0 30px 40px 0;
+}
+
+
+/*Ipad___________________________________
+___________________________________________*/
+
+@media only screen 
+and (min-width: 768px){ 
+	header .grid_container h1{
+		font-size: 6rem;
+	}
+	header .grid_container p{
+		margin: 0 0 355px 0;
+	}
+	
+/*	Main__________________________________
+	_______________________________________*/
+	
+	main .start{
+		padding: 90px 0 0 0;
+	}
+	main .items_start{
+		display: flex;
+		flex-flow: column;
+	}
+	main  .start h2{
+		font-size: 3.5rem;
+	}
+	main .start .items_start .left{	
+		margin: 0 20px 0 0;
+		display: flex;
+		flex-flow: row;
+		position: relative;
+	}
+	main .start .items_start .left .iphone{
+		position: absolute;
+		bottom: 100%;
+		right: 0;
+		width: calc(50% - 20px);
+	}
+	main .start .items_start .right{
+		position: relative;
+    	display: flex;
+		flex-flow: row wrap;
+	}
+	main .start .left p,
+	main .start .right p{
+		margin: 0 20px 35px 0;
+		width: calc(50% - 20px);
+}	
+	main .article .items{
+		flex-flow:  row;
+	}
+	main .article .items .size{
+		width: 66.66666%
+	}
+	main .article .items .grin{
+		width: 33.33333%
+	}
+	
+	
+	main .info .section_items article {
+		width: calc(25% - 25px);}
+		
+	main .card_info{
+		margin: 0 -5vw;
+		padding: 105px 5vw 145px;
+		flex-flow: row;
+	}
+	main .card_info article{
+		padding: 50px 55px;
+		transform: rotate(0deg);
+		transition: transform 1s ease;
+	}
+	
+	main .card_info article:hover{
+	    background: white;
+		box-shadow: -1px 2px 15px 2px;
+		transform: rotate(5deg);
+		transition: transform 1s ease;
+	}
+/*	Footer___________________________
+	
+	_______________________________________*/
+
+	footer .items_footer{
+		flex-flow: row;
+	}
+	footer .items_footer .items_left{
+		margin: 0 130px 30px 0;
+	}
+			
+}
+
+@media only screen 
+	and (min-width: 1280px){ 
+
+		.grid_container{
+			width: 1170px;
+			margin: 0 auto;
+			padding: 55px 0 0;
+		}
+		header .logo span{
+			margin: 0 0 355px 0;
+		}
+		header .grid_container h1 {
+			font-size: 6rem;}
+		
+		header .grid_container p{
+			font-size: 13px;
+    		line-height: 24px;
+		}
+		
+/*Main __________________________
+		_________________________*/
+		
+		main .start{
+			padding: 60px 0 40px 0;
+		}
+		
+		main .info {
+			padding: 100px 0 161px 0;}
+		
+		main .info_grin {
+        	padding: 125px 5vw 160px;
+		}
+		main .info h2 {
+			margin: 0 0 70px 0;
+		}
+		main .background{
+			margin: 0 -100vw;
+			padding: 0 100vw;
+			background-size: inherit;
+		}
+		main .background article h2{
+			font-size: 6rem;
+		}
+		main .info_grin{
+			margin: 0 -100vw;
+			padding: 125px 100vw 160px;
+		}
+		main .card_info {
+			margin: 0 -5vw;
+			padding: 105px 5vw 145px;}
+		
+		main .card_info {
+    		margin: 0 -100vw;
+			padding: 105px 100vw 145px;}
+/*footer________________________________
+		________________________________*/
+		
+		
+		footer .spisoc {
+			justify-content: flex-start; 
+		}
+
+}
+

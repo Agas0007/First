@@ -1,0 +1,42 @@
+
+x
+.bg-apple {
+    width: 20px; height: 25px;
+    background: url('css_sprites.png') -656px -115px;
+}
+
+x
+.bg-heart {
+    width: 18px; height: 17px;
+    background: url('css_sprites.png') -696px -115px;
+}
+
+x
+.bg-logo {
+    width: 92px; height: 41px;
+    background: url('css_sprites.png') -656px -10px;
+}
+
+x
+.bg-Shape {
+    width: 24px; height: 18px;
+    background: url('css_sprites.png') -700px -71px;
+}
+
+x
+.bg-windows {
+    width: 24px; height: 24px;
+    background: url('css_sprites.png') -656px -71px;
+}
+
+x
+.bg-strela {
+    width: 14px; height: 5px;
+    background: url('css_sprites.png') -734px -115px;
+}
+
+x
+.bg-iPhone {
+    width: 626px; height: 909px;
+    background: url('css_sprites.png') -10px -10px;
+}

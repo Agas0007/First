@@ -1,0 +1,1082 @@
+
+/* GLOBAL STYLES ______________________
+-------------------------------------*/
+*{
+    box-sizing:border-box
+}
+
+html{
+    font-size: 62.5%
+}
+
+@font-face {
+                    font-family: 'Open Sans';
+                    src: url('../fonts/OpenSans-Regular.ttf');
+                    font-weight: normal;
+                    font-style: normal;
+}
+@font-face {
+                    font-family: 'Open Sans';
+                    src: url('../fonts/OpenSans-Bold.ttf');
+                    font-weight: bold;
+                    font-style: normal;
+}
+@font-face {
+                    font-family: 'Montserrat';
+                    src: url('../fonts/Montserrat-Regular.ttf');
+                    font-weight: normal;
+                    font-style: normal;
+}
+@font-face {
+                    font-family: 'Montserrat';
+                    src: url('../fonts/Montserrat-Bold.ttf');
+                    font-weight: bold;
+                    font-style: normal;
+}
+
+    /*Global___________________________
+    ___________________________________*/
+body{
+    background: #555555;
+    font: bold 1.4rem 'Montserrat';
+}
+img{
+        width: 100%;
+        max-width: 100%;
+        display: block;
+    }
+a{
+    text-decoration: none;
+}
+.gridContainer{
+    padding: 25px 5vw;
+    display: flex;
+    flex-flow: column;
+}
+body main section:nth-of-type(odd){
+    background: #e7eef6;
+} 
+body main section:nth-of-type(even){
+    background: #fff;
+} 
+/* Mobyle ______________________
+ -------------------------------------*/
+
+header{
+    position: absolute;
+    z-index: 1;
+    width: 100%
+}
+header .gridContainer{
+    flex-flow:row;
+    justify-content: space-between;
+}
+header .logo{
+    display: flex;
+    position: relative;
+}
+header .logo a{
+    width: 27px;
+    height: 26px;
+    background: url('../imeges/spritesheet 2.png') no-repeat;
+    display: block;
+}
+header .logo li{
+    margin: 0 0 0 4px;
+}
+header .logo .ic1{
+    background-position: -5px -5px;
+    transition: background-position 1s ease-in-out; 
+}
+header .logo:hover li .ic1{
+    background-position: -191px -5px;
+}
+header .logo .ic2{
+    background-position: -42px -5px;
+    transition: background-position 1s ease-in-out;
+}
+header .logo:hover li .ic2{
+    background-position: -228px -5px;
+}
+header .logo .ic3{
+    background-position: -79px -5px;
+    transition: background-position 1s ease-in-out;
+}
+header .logo:hover li .ic3{
+    background-position: -265px -5px;
+}
+header .logo .ic4{
+    background-position: -117px -5px;
+    transition: background-position 1s ease-in-out;
+}
+header .logo:hover li .ic4{
+    background-position: -303px -5px;
+}
+header .logo .ic5{
+    background-position: -154px -5px;
+    transition: background-position 1s ease-in-out;
+}
+header .logo:hover li .ic5{
+    background-position: -340px -5px;
+}
+
+header .humb{
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    text-indent: -9999px;
+    display: block;
+}
+header .humb::before{
+    content:'';
+    height: 2px;
+    width: 25px;
+    border-top: 2px solid #fff;
+    position: absolute;
+    top:10px;
+    display: block;
+}
+header .nav{
+    display: flex;
+    flex-flow:column;
+    left: -400px;
+    position: fixed;
+    font: 14px/22px 'Montserrat';
+    background: rgb(8, 8, 10);
+    width: 250px;
+    transition: left 1s linear;
+    z-index: 2;
+    bottom:0;
+    top:0;
+    box-shadow: 2px 3px 5px 0px rgb(52, 152, 219);
+}
+
+header .active{
+    left:0;
+}
+header .nav li{
+    margin:10px 0 5px 0;
+    border-bottom: 1px dotted #fff;
+    padding: 10px;
+    font: bold 1.4rem 'Montserrat'; 
+}
+header .nav li:hover{
+    background: #222;
+    
+}
+header .nav li a{
+    color:#fff;
+    text-shadow: 20px 9px 20px #3498db;
+}
+
+header a{
+    font: bold 1.4rem 'Montserrat';
+    color:#fff;
+}
+
+header .sign{
+    position: absolute;
+    right: 5vw;
+    top: 80px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 5px;
+    width: 80px;
+    text-align: center;
+    background: #3498db;
+    font-size: 12px;
+}
+header .sign:hover{
+    background: #13276d;
+}
+
+/*MAIN________________________________*/
+
+main .promo{
+    width: 100%;
+    height: 100vh;    
+}
+main .slider{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+}
+main .promo .slider .item::before{
+    content:'';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+main .promo .slider img{
+        height: 100vh;
+}
+.slider .slick-prev, .slider .slick-next{
+         display: none !important;
+    }
+.slider .slick-dots {
+        position: absolute;
+        bottom: 0;
+        display: block;
+        width: 100%;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+        bottom: 40px;
+        z-index:2;
+}
+.slider .slick-dots li {
+        position: relative;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        margin: 0 16px;
+        padding: 0;
+        cursor: pointer;
+}
+    
+.slider .slick-dots li button {
+        display: block;
+        width: 10px;
+        height: 10px;
+        padding: 5px;
+        cursor: pointer;
+        color: transparent;
+        outline: none;
+        background:#636363;
+        border-radius: 50%;
+        border:.4px solid #000;
+}
+.slider .slick-dots li button:active{
+        background:#b7b7b7;
+        border-radius: 50%;
+        border:.4px solid #fff;
+}
+main .text{
+    margin:0 5vw;
+    position: absolute;
+    height: 100vh;
+    display: flex;
+    flex-flow:column;
+    justify-content: center;
+    align-items: center;
+}
+main .title{
+    font-size: 2.4rem;
+    color:#fff;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-flow:column;
+    justify-content: center;
+    align-items: center;
+}
+main .title i{
+    width: 61px;
+    height: 60px;
+    background: url(../imeges/spritesheet%20Orion.png) no-repeat -490px -231px;
+    margin: 0 0  50px 0;
+}
+main .text .info{
+    font: 1.6rem/2.4rem 'Open Sans';
+    text-align: center;
+    margin-bottom: 6rem;
+    color: #fff;
+}
+main .promo .button .learn{
+    border-radius: 5px 0 0 5px;
+    padding: 10px 20px;
+    margin-right: -5px;
+    background: #59a3fc;
+    position: relative;
+    font-size: 12px;
+  }
+main .promo .button a{
+    color: #fff;
+}
+main .promo .button a:hover{
+    background: #13276d;    
+}
+main .promo .button .learn::before{
+    content:'OR';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    color:#fff;
+    background: #0078b2;
+    left: 116px;
+    bottom: 10px;
+    font-size: 10px;
+}
+main .promo .button .contact{
+    border-radius: 0 5px 5px 0;
+    padding: 10px 20px;
+    background: #3d92f9;
+    font-size: 12px;
+}
+    /*Section WEB ________________________
+    ______________________________*/
+main .web {
+    background: #e7eef6;
+    border-top: 1px solid #88929d;
+    border-bottom: 1px solid #88929d;
+}
+
+main .web .gridContainer article{
+    margin: 30px 0;
+    font:1.4rem/2.4rem 'Open Sans';
+    color:#88929d;
+}
+main .web .gridContainer article a{
+    margin: 0 auto 30px;
+    display: block;
+    width: 96px;
+    height: 96px;
+    background: #cadaec;
+    border-radius: 5px;
+    padding: 30px 0;
+}
+main .web .gridContainer i{
+    background: url(../imeges/spritesheet%20Orion.png) center no-repeat;
+    display: block;
+    width: 38px;
+    height: 37px;
+    margin: auto;
+}
+main .web .gridContainer .browser{
+   background-position: -81px -157px;
+}
+main .web .gridContainer .anchor{
+   background-position: -5px -123px;
+}
+main .web .gridContainer .print{
+   background-position: -442px -231px;
+}
+main .web .gridContainer h2{
+    font: bold 2rem 'Montserrat';
+    color:#555555;
+    text-align: center;
+    margin: 0 0 25px 0;
+}
+main .web .gridContainer p{
+    font:1.4rem/2.4rem 'Open Sans';
+    text-align: center;
+}
+    /*Section weWork_____________________
+    _____________________________________*/
+main .weWork h2{
+    font:3rem/3.6rem 'Montserrat';
+    text-align: center;
+    color:#464646;
+    margin:0 0 3rem 0;
+}
+main .weWork .thisIs{
+    font:1.4rem/2.2rem 'Open Sans';
+    text-align: center;
+    color:#a1a1a1;
+    margin:0 0 3rem 0;
+}
+
+main .artContent{
+    position: relative;
+    background: url(../imeges/Picsel.jpg) 11.5px 0 repeat-y;
+    padding: 25px 0 25px 45px;
+    margin: 0 0 3rem 0;
+}
+
+main .artContent::before, main .artContent::after{
+    content:'';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border:3px solid #d2d3d7;
+    border-radius: 50%;
+    background:#fff;
+    left:0;
+}
+main .artContent::before{
+    top:0;
+}
+main .artContent::after{
+    bottom:0;
+}
+main .artContent article{
+    padding: 2rem 1.8rem;
+    border: 1px solid #a1a1a1;
+    border-bottom: 5px solid #4fb1f3;
+    margin: 0 0 2rem 0;
+    position: relative;
+}
+main .artContent article::before{
+    content:'';
+    width: 13px;
+    height: 13px;
+    background: #4fb1f3;
+    border-radius: 50%;
+    top:30px;
+    left:-39px;
+    position: absolute;
+}
+main .artContent article:nth-of-type(even){
+    border-bottom-color: #ff1e4f;
+}
+main .artContent article:nth-of-type(even)::before{
+    background: #ff1e4f;
+}
+main .artContent h3{
+    font:bold 1.4rem/2.4rem 'Montserrat';
+    color:#717171;
+    margin: 0 0 14px 0;
+    position: relative;
+}
+main .artContent h3::before{
+    content:'';
+    position: absolute;
+    border-right: 14px solid #a1a1a1;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    left: -32px;
+    top: 9px;
+}
+
+ main .artContent h3::after{
+    content:'';
+    position: absolute;
+    border-right: 12px solid #ffffff;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    left: -29px;
+    top: 10px;
+}
+
+main .artContent p{
+    font:1.2rem/1.8rem 'Open Sans';
+    color:#898989;
+}
+main .weWork .see{
+    height: 40px;
+    background: #ff1e4f;
+    border-radius: 5px;
+    margin:0 auto;
+    padding: 12px 17px;
+    color:#fff; 
+}
+
+    /* OurWork________________________________
+    __________________________________________*/
+
+main .ourWork h2{
+    font:3rem/3.6rem 'Montserrat';
+    text-align: center;
+    color:#464646;
+    margin:0 0 3rem 0;
+    padding: 4rem 0 0 0;
+}
+main .ourWork p{
+    font:1.4rem/2.4rem 'Open Sans';
+    text-align: center;
+    color:#464646;
+    margin:0 0 5rem 0; 
+}
+main .ourWork img{
+    height: auto;
+}
+
+main .ourWork .sliderOur .modul{
+    margin: 0 10px 15px 0;
+    position: relative;
+}
+main .ourWork .sliderOur .modul a{
+    position: absolute;
+    width: 120px;
+    height: 35px;
+    background: rgba(0, 0, 0, 0.58);
+    display: block;
+    bottom: 11px;
+    left: 18px;
+    text-align: center;
+    font: bold 1.5rem/3rem 'Open Sans';
+    color:#fff;
+}
+main .ourWork .sliderOur .modul a:hover{
+    color: #595959;
+}
+main .ourWork .sliderOur ul{
+    display: none !important;
+}
+main .ourWork .slick-prev, main .ourWork .slick-next{
+    display: none !important;
+}
+main .ourWork .sliderOur .prev{
+    position: absolute;
+    background: url(../imeges/spritesheet%20Orion.png) no-repeat -500px -123px;
+    width: 24px;
+    height: 24px;
+    display: block;
+    bottom: -20px;
+    right: 35px;
+}
+
+main .ourWork .sliderOur .next{
+    background: url(../imeges/spritesheet%20Orion.png) no-repeat -534px -123px;
+    width: 24px;
+    height: 24px;
+    display: block;
+    position: absolute;
+    bottom: -20px;
+    right: 7px;
+}
+
+/*Test______________________________
+____________________________________*/
+.test h2{
+    font: bold 2.4rem/2.8rem 'Montserrat';
+    color:#464646;
+    text-align: center;
+    margin: 0 0 4rem 0;
+}
+.test p{
+    font: 1.4rem/2.4rem 'Open Sans';
+    color:#a1a1a1;
+    text-align: center;
+}
+.test .orion{
+    margin: 0 0 4rem 0;
+}
+.test .neil{
+    border: 1px solid #e0e0e0; 
+    border-radius: 5px;
+    padding: 25px 30px;
+    margin: 0 0 3rem;
+    position: relative;
+}
+
+.test .armstrong{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: url(../imeges/spritesheet%20Orion.png) no-repeat -90px -231px;
+    margin: 0 auto 2rem;
+    display: block;
+}
+.test h3{
+    font: 1.9rem/2.2rem 'Montserrat';
+    color:#363636;
+    margin:0 0 1.5rem;
+    text-align: center;
+}
+.test .contacts p{
+    margin: 0 0 2rem 0;
+}
+.test .photo{
+    font:1.4rem/2.2rem 'Open Sans';
+    color: #a1a1a1;
+    margin: 0 0 6.5rem;
+}
+.test article{
+    margin: 0 0 3rem 0;
+}
+.test .contacts .social{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+}
+.test .contacts li{
+    margin: 0 2rem 0 0;
+}
+.test .contacts .face1, .face2, .face3, .face4{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: url(../imeges/spritesheet%20Orion.png) no-repeat -63px -5px;
+    display: block;
+    margin: 0 auto 2rem;
+    position: relative;
+}
+.test .contacts .face2{
+    background: url(../imeges/spritesheet%20Orion.png) no-repeat -193px -5px;
+}
+.test .contacts .face3{
+    background: url(../imeges/spritesheet%20Orion.png) no-repeat -193px -143px;
+}
+.test .contacts .face4{
+    background: url(../imeges/spritesheet%20Orion.png) no-repeat -351px -5px;
+}
+.test .contacts .face1::before, .face2::before, .face3::before, .face4::before {
+    content: '';
+    position: absolute;
+    width: 48px;
+    height: 49px;
+    border-radius: 50%;
+    background: url(../imeges/spritesheet%20Orion.png) no-repeat -5px -5px;
+    top: 42px;
+    left: -20px;
+}
+.test .contacts .face2::before{
+    background: url(../imeges/spritesheet%20Orion.png) no-repeat -500px -5px; 
+}
+.test .contacts .face3::before{
+    background: url(../imeges/spritesheet%20Orion.png) no-repeat -5px -64px;
+}
+.test .contacts .face4::before{
+    background: url(../imeges/spritesheet%20Orion.png) no-repeat -500px -64px; 
+}
+
+.test .contacts .social .icon1, .icon2, .icon3{
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    background: url(../imeges/spritesheet%20Orion.png) no-repeat -125px -157px;
+    display: block;
+    margin: 0 auto 2rem;
+}
+.test .contacts .social .icon2{
+    background: url(../imeges/spritesheet%20Orion.png) no-repeat -148px -154px;
+}
+.test .contacts .social .icon3{
+    background: url(../imeges/spritesheet%20Orion.png) no-repeat -53px -157px;;
+}
+    /*Maps_____________________________________
+    ___________________________________________*/
+.maps iframe{
+    max-width: 100%;
+   
+}
+.maps{
+   position: relative;  
+}
+.maps::before{
+    content:'';
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 450px;
+    display: block;
+}
+
+    /* FOOTER______________________________
+    _______________________________________*/
+footer .panel{
+    background: #111111;
+}
+footer .logotip .nasa{
+    display: block;
+    width: 85px;
+    height: 71px;
+    background:url(../imeges/spritesheet%20Orion.png) no-repeat -181px -301px;
+}
+footer .logotip .jaxa{
+    display: block;
+    width: 101px;
+    height: 61px;
+    background:url(../imeges/spritesheet%20Orion.png) no-repeat -331px -231px;
+}
+footer .logotip .boeing{
+    display: block;
+    width: 199px;
+    height: 45px;
+    background:url(../imeges/spritesheet%20Orion.png) no-repeat -331px -176px;
+}
+footer .logotip .cnn{
+    display: block;
+    width: 75px;
+    height: 37px;
+    background:url(../imeges/spritesheet%20Orion.png) no-repeat -5px -231px;
+}
+footer .logotip{
+    display: flex;
+    flex-flow:row wrap;
+}
+footer .logotip li{
+    margin: 0 auto 2.4rem;
+}
+footer .footer{
+    background: #000000;
+}
+
+footer .footer .infoFooter{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 0 0 3.5rem 0;
+}
+footer .footer .value a, footer .footer .aff a, footer .footer .soc a{
+    font: 1.4rem/2.4rem 'Open Sans';
+    color:#d7d7d7;
+}
+footer .footer .value li:first-of-type a, footer .footer .aff li:first-of-type a, footer .footer .soc li:first-of-type a{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+footer .go h5{
+    font: bold 1.4rem/2.4rem 'Open Sans';
+    color:#d7d7d7;
+    margin: 0 0 1.5rem 0;
+    display: flex;
+    justify-content: flex-end;
+}
+footer .go form{
+    margin: 0 0 1.5rem 0;
+    display: flex;
+    justify-content: flex-end;
+}
+footer .go p{
+    font: 1.4rem/2.4rem 'Open Sans';
+    color:#535353;
+    margin: 0 0 1.5rem 0;
+    text-align: end;
+    
+}
+footer .go .cor{
+    background: url(../imeges/cor.png)  right center no-repeat;
+    padding: 0 25px 0 0; 
+}
+footer .footer form input[type="email"]{
+        height: 40px;
+        background: #363636;
+        padding: 0 0 0 25px;
+        border: none;
+        color:#7fffd4;
+        
+    }
+footer .go .mail input[type="submit"]{
+        background: #555555;
+        color:#b7b7b7;
+        border: none; 
+    }
+    /*Mobyle landscape________________________*/
+@media screen and (min-width:667px) and (orientation: landscape){
+    main .text .info{
+        margin: 0 0 3rem 0;
+    }
+    .slider .slick-dots {
+        bottom:10px;    
+    }
+    
+    main .web .article{
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+    }
+    main .ourWork .sliderOur .modul{
+        width: calc(50% - 15px) !important;
+    }
+    .test .contacts{
+        display: flex;
+        flex-flow:row wrap;
+        justify-content: space-between;
+    }
+    
+} 
+    /*Ipad____________________________________
+    __________________________________________*/
+
+@media screen and (min-width:768px){
+    /*Global______________________________
+    _____________________________________*/
+    .gridContainer{
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        padding: 50px 5vw;
+    }
+    /*HEADER______________________________
+    _________________________________*/
+    header .navlog{
+        margin-bottom: 300px;
+    }
+    
+    header .sign{
+        padding: 10px 5px;
+        width: 125px;
+        font: inherit;
+    }
+    
+    .slider .slick-dots {
+            bottom: 50px;
+} 
+    /*Main________________
+    ______________________*/
+    main .text{
+        margin: 0;
+        width: 100%;
+}
+
+    main .title{
+        margin: 0 0 7rem;
+        font-size: 3.4rem;
+}
+    
+    main .text .info{
+        margin: 0 0 6rem 0;
+        font-size:2rem;
+}
+/* Section №2 Web___________________
+   _________________________________*/
+    main .web .article{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    main .web article{
+        width:50%;
+    }
+    
+   /*Section weWork_____________________
+    _____________________________________*/
+    
+    main .weWork .artContent{
+        background-position: center top;
+        padding: 25px;
+    }
+    main .artContent::before, main .artContent::after{
+    left:calc(50% - 12px);
+}
+    main .weWork article{
+        width: calc(50% - 31.5px);
+        margin: 0 0 3rem calc(50% + 31.5px); 
+    }  
+    main .weWork article:nth-of-type(even){
+       margin: 0 0 3rem; 
+} 
+    main .weWork article:nth-of-type(even)::before{
+        left:auto;
+        right: -39px;        
+}
+    main .artContent article:nth-of-type(even) h3::before{
+        border-left: 14px solid #a1a1a1;
+        border-top: 7px solid transparent;
+        border-bottom: 7px solid transparent;
+        border-right: none;
+        left:auto;
+        right: -32px;
+        top: 9px;
+    }  
+        
+     main .artContent article:nth-of-type(even) h3::after{
+        content:'';
+        position: absolute;
+        border-left: 14px solid #fff;
+        border-top: 7px solid transparent;
+        border-bottom: 7px solid transparent;
+        border-right: none;
+        left:auto;
+        right: -29px;
+        top: 9px;
+    }
+    
+    /* OurWork________________________________
+    __________________________________________*/
+
+      
+    main .ourWork h2{
+        font:3rem/3.6rem 'Montserrat';
+    }
+    main .ourWork p{
+        font:1.8rem/2.4rem 'Open Sans';
+    }
+    main .ourWork .sliderOur .modul{
+        width: calc(50% - 15px) !important;
+    }
+    main .weWork .see{
+        position: relative;
+        bottom:-70px;
+    }
+    /*Test_________________________________
+    _______________________________________*/
+    .test .neilArmstrong{
+        display: flex;
+}
+    .test .neil{
+           margin: 0 auto 10rem;
+    }
+    .test .neil::before{
+    content:'';
+    position: absolute;
+    border-right: 14px solid #e0e0e0;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    top: 40px;
+    left: -14px;
+}
+    .test .neil::after{
+    content:'';
+    position: absolute;
+    border-right: 14px solid #fff;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    top: 40px;
+    left: -12px;
+}
+   .test .contacts{
+        display: flex;
+        flex-flow:row wrap;
+        justify-content: space-between;
+} 
+.test .contacts article{
+    width: 50%;
+}
+    /*Footer______________________________
+    _____________________________________*/
+footer .logotip{
+        display: flex;
+        flex-flow:row;
+    }
+}
+
+@media screen and (min-width: 1024px) and (orientation: landscape){
+    /*Header______________________________
+    ______________________________________*/
+   header .navlog{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    width: 100%;
+}
+    
+header .humb{
+    display: none;
+}
+header .nav{
+    position: static;
+    background: none;
+    width: 500px;
+    height: 100%;
+    z-index: 0;
+    transition: none;
+    margin-top: 5px;
+    box-shadow: none;
+}
+header .nav ul{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+header .nav li {
+    margin: 0;
+    border-bottom: none; 
+    padding:0; 
+}
+header .nav li a{
+    text-shadow: none;
+}
+header .sign{
+    position: static;
+    }
+
+    
+}
+/* Desktop ______________________
+-------------------------------------*/ 
+
+@media screen and (min-width: 1170px){
+    /*Global________________________________
+    ________________________________________*/
+    .gridContainer{
+        max-width: 1170px;
+        padding: 50px 90px;
+        margin: 0 auto;
+        display: flex;
+        flex-flow:column;
+        justify-content: space-between;
+}
+    /*Header________________________________
+    _______________________________________*/    
+header{
+    width: 100%;
+}
+
+
+       
+/*MAIN________________________________ */
+    main .slider{
+        width:100%;
+        height:100vh;
+}
+    main .item{
+        height: 100vh;
+}
+  
+   .slider .slick-dots {
+        bottom: 50px;
+} 
+    main .title i{
+        margin: 0 0 75px 0;
+    }
+    main .title{
+        font-size: 4.8rem;
+    }
+   
+    main .promo .button .learn, main .promo .button .contact {
+        font-size: 1.4rem;
+    } 
+    main .promo .button .learn::before{
+        left: 131px;
+    }
+/* Section №2 Web___________________
+   _________________________________*/
+   
+    main .web article{
+        width:calc((100% - 200px)/3);
+    } 
+    
+ /*Section weWork_____________________
+ _____________________________________*/
+    main .weWork h2{
+        font:bold 3rem/3.4rem 'Montserrat';
+    }
+    main .weWork article {
+        width: calc(50% - 50.5px);
+        margin: 0 0 3rem calc(50% + 50.5px);
+}
+    main .weWork article::before{
+        left: -57px;        
+}
+    main .weWork article:nth-of-type(even)::before{
+        right: -59px;        
+}
+ 
+    
+    /*test_____________________________
+    ___________________________________*/
+    .test .neilArmstrong{
+        margin: 0 auto;
+    }
+    .test .armstrong{
+        margin: 0 4.5rem 0;
+    }
+    .test .contacts article{
+        width: calc((100% - 340px)/4);
+    }
+/*FOOTER_________________________
+__________________________________*/
+    footer .footer .gridContainer{
+        display: flex;
+        flex-flow:row;    
+    }
+    footer .footer .infoFooter{
+        display: flex;
+        justify-content: space-between;
+        width: calc(50% - 160px);
+    }
+    footer .footer .go{
+        width: calc(50% - 130px);
+    }
+    footer .footer form{
+        justify-content: flex-start;
+    }
+    footer .footer form input[type="email"]{
+        width: 345px;
+    }
+    
+    footer .footer h5{
+        justify-content: flex-start;
+    }
+    footer .footer .go p{
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+   
